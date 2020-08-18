@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import {Card, CardBody, CardImg, CardText, CardTitle, 
     Breadcrumb, BreadcrumbItem, Button, 
     Modal, ModalHeader, ModalBody, Row, Col, Label} from "reactstrap";
@@ -41,6 +41,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
                             );   
                         })}
                     </ul>
+                    <CommentForm/>
                 </div>
             )
             } else {
@@ -50,27 +51,68 @@ const minLength = (len) => (val) => val && (val.length >= len);
         } 
     }
 
-    function CommentForm() {
+    const DishDetail = (props) => {
+        if(props.dish!=null){
+            return (
+                <div className="container">
+                <div className="row">
+                    <Breadcrumb>
+                        <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
+                    </Breadcrumb>
+                    <div className="col-12">
+                        <h3>{props.dish.name}</h3>
+                        <hr />
+                    </div>                
+                </div>
+                <div className="row">
+                        <RenderDish dish={props.dish} />
+                        <RenderComments comments={props.comments}/>
+                </div>
+                </div>
+            );
+        }else{
+            return(
+                <div className="row"></div>
+            )
+        }
 
-    const [modal, setModal] = useState(false);
-      
-    const toggle = () => {setModal(!modal)};
-    
+    }
 
-    const handleSubmit = (values) => {
+
+export default DishDetail;
+
+class CommentForm extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            isModalOpen: false
+        }
+        this.toggleModal = this.toggleModal.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    toggleModal(){
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
+          });
+    }
+
+    handleSubmit(values){
         console.log("Current state is: " + JSON.stringify(values));
         alert("Current state is: " + JSON.stringify(values));
     };
 
-    return (
-        <div className="container">
-            <Button outline color="bg-primary" onClick={toggle}>
+    render(){
+        return (
+            <div className="container">
+            <Button outline onClick={this.toggleModal}>
                 <span className="fa fa-pencil"></span> Submit comment
             </Button>
-            <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}>Submit Commit</ModalHeader>
+            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                <ModalHeader toggle={this.toggleModal}>Submit Commit</ModalHeader>
                 <ModalBody>
-                    <LocalForm onSubmit={(values) => handleSubmit(values)}>
+                    <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
                         <Row className="form-group">
                             <Col>
                                 <Label htmlFor="rating">Rating</Label>
@@ -122,35 +164,4 @@ const minLength = (len) => (val) => val && (val.length >= len);
         </div>
         );
     }
-
-    const DishDetail = (props) => {
-        if(props.dish!=null){
-            return (
-                <div className="container">
-                <div className="row">
-                    <Breadcrumb>
-                        <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
-                        <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
-                    </Breadcrumb>
-                    <div className="col-12">
-                        <h3>{props.dish.name}</h3>
-                        <hr />
-                    </div>                
-                </div>
-                <div className="row">
-                        <RenderDish dish={props.dish} />
-                        <RenderComments comments={props.comments}/>
-                        <CommentForm/>
-                </div>
-                </div>
-            );
-        }else{
-            return(
-                <div className="row"></div>
-            )
-        }
-
-    }
-
-
-export default DishDetail;
+}
