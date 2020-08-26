@@ -271,6 +271,28 @@
       "message": "afadsfds",
       "date": "2017-12-04T09:41:49.890Z",
       "id": 1
+    },
+    {
+      "date": "2020-08-26T17:18:34.864Z",
+      "firstname": "Alejandro",
+      "lastname": "Manotas",
+      "telnum": "32222222",
+      "email": "foodq@k.com",
+      "agree": true,
+      "contactType": "Tel.",
+      "message": "This is a test feedback",
+      "id": 2
+    },
+    {
+      "firstname": "Alejandro",
+      "lastname": "Mejia",
+      "telnum": "3201929293",
+      "email": "food@k.qc",
+      "agree": true,
+      "contactType": "Tel.",
+      "message": "This is the definitive feedback",
+      "date": "2020-08-26T17:24:50.951Z",
+      "id": 3
     }
   ]
 }
