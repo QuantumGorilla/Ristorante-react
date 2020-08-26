@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Ristorante-react/static/css/main.4830df2f.chunk.css",
+    "main.js": "/Ristorante-react/static/js/main.ffb95c33.chunk.js",
+    "main.js.map": "/Ristorante-react/static/js/main.ffb95c33.chunk.js.map",
+    "runtime-main.js": "/Ristorante-react/static/js/runtime-main.c17dcf60.js",
+    "runtime-main.js.map": "/Ristorante-react/static/js/runtime-main.c17dcf60.js.map",
+    "static/css/2.321ee481.chunk.css": "/Ristorante-react/static/css/2.321ee481.chunk.css",
+    "static/js/2.9276b3fe.chunk.js": "/Ristorante-react/static/js/2.9276b3fe.chunk.js",
+    "static/js/2.9276b3fe.chunk.js.map": "/Ristorante-react/static/js/2.9276b3fe.chunk.js.map",
+    "index.html": "/Ristorante-react/index.html",
+    "precache-manifest.3db7aedfc813cb6786ed0675c0dbe900.js": "/Ristorante-react/precache-manifest.3db7aedfc813cb6786ed0675c0dbe900.js",
+    "service-worker.js": "/Ristorante-react/service-worker.js",
+    "static/css/2.321ee481.chunk.css.map": "/Ristorante-react/static/css/2.321ee481.chunk.css.map",
+    "static/css/main.4830df2f.chunk.css.map": "/Ristorante-react/static/css/main.4830df2f.chunk.css.map",
+    "static/js/2.9276b3fe.chunk.js.LICENSE.txt": "/Ristorante-react/static/js/2.9276b3fe.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/Ristorante-react/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c17dcf60.js",
+    "static/css/2.321ee481.chunk.css",
+    "static/js/2.9276b3fe.chunk.js",
+    "static/css/main.4830df2f.chunk.css",
+    "static/js/main.ffb95c33.chunk.js"
+  ]
+}
