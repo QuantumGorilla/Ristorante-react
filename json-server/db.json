@@ -209,6 +209,14 @@
       "comment": "Testeando",
       "date": "2020-08-25T01:31:30.127Z",
       "id": 20
+    },
+    {
+      "dishId": 0,
+      "rating": "3",
+      "author": "Alejandro",
+      "comment": "Hola",
+      "date": "2020-08-27T03:07:29.854Z",
+      "id": 21
     }
   ],
   "promotions": [
@@ -293,6 +301,17 @@
       "message": "This is the definitive feedback",
       "date": "2020-08-26T17:24:50.951Z",
       "id": 3
+    },
+    {
+      "firstname": "Kelvin",
+      "lastname": "Clain",
+      "telnum": "3222222",
+      "email": "q@f.com",
+      "agree": true,
+      "contactType": "Tel.",
+      "message": "Eduardo is gay",
+      "date": "2020-08-27T03:11:31.371Z",
+      "id": 4
     }
   ]
 }
